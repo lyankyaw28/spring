@@ -56,6 +56,38 @@ Inversion Of Control (IOC) and Dependency Injection
 	  		 
 	  	7. Declarative support
 	  		 caching, validation, transactions and formatting မ်ားကို declarative support လုပ္ေပးထားတယ္
-	  		
+************************************************************************************************************************	  		
+Spring Modules
+	spring framework ကို module အမ်ားၾကီးနဲ႔ ဖြဲ႕စည္းထားတယ္
+	core, beans, context, expression language, AOP, Aspects, Instrumentation, JDBC, ORM, OXM, JMS, Transaction, Web, Servlet, Struts etc. 
+	These modules are grouped into Test, Core Container, AOP, Aspects, Instrumentation, Data Access / Integration, Web (MVC / Remoting)	
+	
+	တစ္ခုခ်င္းရွင္းမယ္ container မ်ားကို အရင္ရွင္းမယ္
+	1. Testing
+		ဒီ layer က JUnit နဲ႔ TestNG test လုပ္ၿခင္းကို support ေပးတယ္
+		
+	2.Spring Core Container
+		spring core container မွာ 1.core, 2.beans, 3.context and 4.expression language (EL) modules ပါ၀င္ပါတယ္
+	
+		2.1.Core and Beans
+			ဒီ module ကေန IOC နဲ႔ DI features မ်ားကို ေပးပါတယ္
+		
+		2.2.Context
+			context module က internationalization (I18N), EJB, JMS, Basic Remoting မ်ားကို support လုပ္ပါတယ္
+		
+		2.3.Expression Language
+			Expression Language module က to setting and getting property values, method invocation, accessing collections and indexers,
+			 named variables, logical and arithmetic operators, retrieval of objects by name မ်ားကို support ေပးပါတယ္
+			 
+	3.AOP, Aspects and Instrumentation
+		Advices, Pointcuts အစရွိသည္မ်ားကို အသံုးၿပဳတဲ့အခါ aspect oriented programming implementation ကို support လုပ္ေပးတယ္
+		decouple ၿပဳလုပ္ရန္ ၿဖစ္တယ္
+		
+	4.Data Access / Integration
+		JDBC, ORM, OXM, JMS and Transaction modules မ်ားရဲ႕ အစုအဖြဲ႕ၿဖစ္တယ္ 
+		database နဲ႔ဆက္ႏြယ္တဲ့အပိုင္းၿဖစ္တယ္
+		
+	5.Web
+		Web, Web-Servlet, Web-Struts and Web-Portlet ရဲ႕အစုအဖြဲ႕ၿဖစ္တယ္ web application တစ္ခုၿဖစ္ဖို႔အတြက္ လိုအပ္တဲ့အပိုင္းလည္းၿဖစ္တယ္
 	
 	
