@@ -1,0 +1,61 @@
+Spring Framework
+	light weight framework တစ္ခုၿဖစ္တယ္။framework of frameworks လို႔လဲ ေခၚႏိုင္တယ္ ဘာလို႔လဲဆိုေတာ့  Struts, Hibernate, Tapestry, EJB, JSF ဆိုတဲ့
+	framework မ်ားကိုလည္း support လုပ္ထားလို႔ၿဖစ္တယ္
+	spring framework ကို module ေတာ္ေတာ္မ်ားမ်ားနဲ႔ ေပါင္းစည္းထားတယ္ IOC, AOP, DAO, Context, ORM, WEB MVC etc.
+************************************************************************************************************************
+Inversion Of Control (IOC) and Dependency Injection
+	ဘာလို႔သံုးတာလဲဆိုရင္ code ထဲကေန dependency ကို ဖယ္ရွားခ်င္တဲ့အတြက္ ၿဖစ္တယ္
+	အဲ့လိုလုပ္လိုက္ၿခင္းအားၿဖင့္ code ကို test လုပ္ရတာနဲ႔ ထိန္းသိမ္းရတာ လြယ္သြားတယ္
+	
+	tight coupling code
+	class Employee{  
+		Address address;  
+		Employee(){  
+			address=new Address();  
+		}  
+	}
+	
+	ioc code
+	class Employee{  
+		Address address;  
+		Employee(Address address){  
+			this.address=address;  
+		}  
+	}
+	ဒီလိုေၿပာင္းလိုက္ၿခင္းအားၿဖင့္ setup ေတြကို ၿပင္စရာမလိုေတာ့ဘဲနဲ႔ logic ေတြကိုၿပင္ဖို႔လိုေတာ့တယ္
+	spring framework မွာ ioc container က dependency ေတြကို inject လုပ္ဖို႔ တာ၀န္ယူတယ္ xml ဖိုင္ၿဖင့္လည္းေကာင္း annotation ၿဖင့္လည္းေကာင္းလုပ္ေဆာင္ႏိုင္တယ္
+	
+	DI ရဲ႕ေကာင္းက်ိဳး
+	 couple ၿဖစ္တာကို ေလ်ာ့ခ်ေပးတဲ့အတြက္ ထိန္းသိမ္းရတာ လြယ္ကူတယ္
+	 test လုပ္ရတာ လြယ္လာတယ္
+	 
+	 advantage of spring framework
+	  1. Predefined Templates	 
+	  		spring framework က JDBC, Hibernate, JPA အစရွိတဲ့ technologies ေတြရဲ႕ template ေတြကို ထုတ္ေပးတယ္
+	  		ဆိုလိုတာက အဲ့ technologies ေတြရဲ႕ basic steps ေတြကို hide လုပ္ေပးလိုက္တဲ့အတြက္ code ေတြအမ်ားၾကီးေရးစရာမလိုေတာ့ဘူး
+	  		jdbc template ကိုပဲၾကည့္လိုက္မယ္ဆိုရင္ jdbc ေရးရင္လုပ္ေဆာင္ရမယ့္ exception handling, creating connection, creating statement, 
+	  		committing transaction, closing connection စတဲ့အခ်က္ေတြကို လုပ္ေဆာင္စရာမလိုေတာ့ဘူး query ေရးေပးလိုက္ရံုပဲ
+	  		
+	  	2. Loose Coupling
+	  		DI ေၾကာင့္
+	  		
+	  	3. Easy to test
+	  		DI က test လုပ္ရတာ လြယ္ကူေအာင္ ၿပဳလုပ္ေပးတယ္ EJB or Struts application တို႔မွာဆိုရင္ test လုပ္ဖို႔အတြက္ server လိုတယ္
+	  		ဒါေပမယ့္ spring framework မွာေတာ့ server မလိုဘူး
+	  		
+	  	4. Light Weight
+	  		သူ႕ရဲ႕ pojo implementation ေၾကာင့္ light weight ၿဖစ္တယ္
+	  		spring framework က ဘယ္ class ကို inherit လုပ္ရမယ္ ဘယ္ interface ကို implements လုပ္ရမယ္လို႔ force ေပးတာမရွိဘူး
+	  		အဲ့တာေၾကာင့္ non-invasive လို႔ဆိုႏိုင္တယ္
+	  		
+	  	5. Fast Development
+	  		spring framework ရဲ႕ DI က framework ေတာ္ေတာ္မ်ားမ်ားကို support ေပးထားလို႔ J2EE application မ်ားကို develop လုပ္ရတာၿမန္ဆန္ေစတယ္
+	  		
+	  	6. Power Abstration
+	  		 JavaEE specifications such as JMS, JDBC, JPA and JTA စသည္မ်ားကို powerful abstraction လုပ္ေပးထားတယ္
+	  		 
+	  	7. Declarative support
+	  		 caching, validation, transactions and formatting မ်ားကို declarative support လုပ္ေပးထားတယ္
+	  		
+	
+	
