@@ -1,0 +1,31 @@
+Dependency Injection by Constructor Example
+	<constructor-arg> ဆိုတဲ့ sub tag ကိုသံုးတယ္ သူက ဘယ္သူ႕ရဲ႕ sub tag လည္းဆိုေတာ့ <bean> tag ရဲ႕ subtag ၿဖစ္တယ္
+		1.primitive and String-based values
+		2.Dependent object (contained object)
+		3.Collection values etc.
+		
+			applicationContext.xml က file ပံုစံနဲ႔ information မ်ားကို bean ကို ေပးပို႔ၿခင္းၿဖစ္တယ္
+			constructor-arg element ဆိုတာက constructor ကို လွမ္းေခၚၿခင္းၿဖစ္တယ္
+			 int type က int type constructor ကိုလွမ္းေခၚလိမ့္မယ္ အဲ့ tag ထဲမွ int ကို assign လုပ္ထားတယ္
+			 <bean id="e" class="com.javatpoint.Employee">  
+				<constructor-arg value="10" type="int"></constructor-arg>  
+			</bean> 
+			
+	ဒီ class ကက်ေတာ့ applicationContext.xml file ကေနတစ္ဆင့္ bean ကို ရတယ္ ၿပီးေတာ့ show method ကိုလွမ္းေခၚလိုက္တယ္
+		 Resource r=new ClassPathResource("applicationContext.xml");  အေရးၾကီးတာက applicationContext.xml file က source file ထဲမွာပဲ ရွိရမယ္
+        BeanFactory factory=new XmlBeanFactory(r);  
+          
+        Employee s=(Employee)factory.getBean("e");  (e ဆိုတာက applicationContext ထဲမွာရွိတဲ့ bean ရဲ႕ id ၿဖစ္တယ္)
+        s.show();  
+********************************************************************************************
+Injecting string-based values
+			 <bean id="e" class="com.javatpoint.Employee">  
+				<constructor-arg value="10"></constructor-arg>  
+			</bean> 
+			type ကိုသတ္မွတ္ေပးဖို႔ ေမ့သြားတယ္ဆိုရင္ေတာ့ default က string ၿဖစ္ၿပီးေတာ့ string constructor ကိုလွမ္းေခၚလိမ့္မယ္
+			
+			<bean id="e" class="com.javatpoint.Employee">  
+				<constructor-arg value="10" type="int" ></constructor-arg>  
+				<constructor-arg value="Sonoo"></constructor-arg>  
+			</bean> 
+			ဒါဆိုရင္ေတာ့ parameter ၂ ခုလက္ခံထားတဲ့ constructor ကို သြားေခၚမယ္ 

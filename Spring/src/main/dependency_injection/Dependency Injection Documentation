@@ -1,0 +1,64 @@
+IOC Container
+	IOC Container က object မ်ားရဲ႕ instantiate, configure and assemble မ်ားကို ကိုယ္စားၿပဳတယ္
+	IOC Container က xml file ကတစ္ဆင့္ information မ်ားရရွိၿပီး အဲ့အတိုင္း အလုပ္လုပ္တယ္
+	သူ႕မွာ အလုပ္ ၃ ခုရွိတယ္
+		application class ကို instantiate လုပ္ရန္
+		object ကိုိ configure လုပ္ရန္
+		objects မ်ားအၾကား dependencies တည္ေဆာက္ရန္တို႔ၿဖစ္တယ္
+		
+IOC အမ်ိဳးအစား ၂ မ်ိဳးရွိတယ္
+	1.Bean Factory
+	2.ApplicationContext
+	
+ဘာကြာလဲဆိုေတာ့
+	ApplicationContext ဆိုတာက Bean Factory ကို မြမ္းမံထားတဲ့ သေဘာမ်ိဳးၿဖစ္တယ္
+	additional functions မ်ားေပါင္းထည့္ထားတယ္ (simple integration with Spring's AOP, message resource handling (for I18N), 
+	event propagation, application layer specific context (e.g. WebApplicationContext) for web application)
+	ထို႕ေၾကာင္ ApplicationContext က ပိုေကာင္းတယ္
+	
+BeanFactory ကို အသံုးၿပဳၿခင္း
+	XmlBeanFactory ဆိုတာ BeanFactory interface ကို implementation လုပ္ထားၿခင္းၿဖစ္တယ္
+	BeanFactory ကို အသံုးၿပဳမယ္ဆိုရင္ XmlBeanFactory class ရဲ႕ instance ကို create လုပ္ဖို႔လိုမယ္
+	Resource resource=new ClassPathResource("applicationContext.xml");  
+	BeanFactory factory=new XmlBeanFactory(resource);
+	XmlBeanFactory ရဲ႕ constructor က resource object ကိုလက္ခံထားတယ္ ဘာလို႔လဲဆိုေတာ့ beanFactory object ကို create လုပ္ဖို႔လိုတယ္အတြက္ၿဖစ္တယ္
+	
+ApplicationContext ကိုအသံုးၿပဳၿခင္း
+	ClassPathXmlApplicationContext class  ဆိုတာ ApplicationContext interface ကို implementation လုပ္ထားၿခင္းၿဖစ္တယ္
+	ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml"); 
+	ClassPathXmlApplicationContext က xml file name string ကိုလက္ခံထားတယ္ ဘာလို႔လဲဆိုေတာ့ ApplicationContext object ကို create လုပ္ဖို႔အတြက္ၿဖစ္တယ္
+*************************************************************************************************************************	
+Dependency Injection in Spring
+	Dependency Injection ဆိုတာ design pattern တစ္ခုၿဖစ္ၿပီးေတာ့ သူက code ေတြထဲက Dependency ေတြကို ဖယ္ရွားေပးတယ္
+	သူက code loosely coupled ၿဖစ္ေစတယ္
+	
+Dependency Lookup(Dependency Injection နဲ႔ ဆန္႔က်င္ဘက္)
+	get the resource(instance of A class) directly by new keyword
+	A obj = new AImpl();  
+	
+	get the resource (instance of A class) by calling the static factory method getA()
+	A obj = A.getA();  
+	
+	JNDI (Java Naming Directory Interface)
+	Context ctx = new InitialContext();  
+	Context environmentCtx = (Context) ctx.lookup("java:comp/env");  
+	A obj = (A)environmentCtx.lookup("A");
+	
+Dependency Lookup ရဲ႕ၿပသနာ
+	အၾကီးစား ၿပသနာ ၂ ခုရွိတယ္
+	1.code tightly coupled ၿဖစ္ေစတယ္။resource က တစ္ခုခု change လုိက္မယ္ဆိုရင္ code ေတြကို အမ်ားၾကီးလိုက္ၿပင္ဖို႔လိုလာၿပီ
+	2.testing လုပ္ရတာမလြယ္ကူဘူး
+	
+Dependency Injection
+	ဒီမွာက်ေတာ့ information ကို external resource ကေနတစ္ဆင့္ေပးတယ္ xml file လိုဟာမ်ိဳးကေနတစ္ဆင့္
+	သူကအထက္က ၿပသနာႏွစ္ခုစလံုးကို ေၿပလည္ေစတယ္
+	
+Dependency Injection ကို spring framework မွာနည္းလမ္း ၂ မ်ိဳးနဲ႔လုပ္ေဆာင္ႏိုင္တယ္
+	1.By Constructor
+	2.By Setter method
+*************************************************************************************************************************
+Dependency Injection by Constructor Example
+	<constructor-arg> ဆိုတဲ့ sub tag ကိုသံုးတယ္ သူက ဘယ္သူ႕ရဲ႕ sub tag လည္းဆိုေတာ့ <bean> tag ရဲ႕ subtag ၿဖစ္တယ္
+		1.primitive and String-based values (sample code --> constructor_dependency_injection package)
+		2.Dependent object (contained object) (sample code --> constructor_injection_dependent_obj package)
+		3.Collection values etc.

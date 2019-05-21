@@ -1,0 +1,8 @@
+Constructor Injection with Dependent Object
+	တြဲရက္ၿဖစ္ေနေသာ object မ်ားကို dependency injection လုပ္ေသာအခါမ်ိဳးမွာ သံုးတယ္
+	ဥပမာ Employee ဆိုတဲ့ bean ထဲမွာ Address Bean ရွိေနသလိုမ်ိဳး
+	
+	applicationContext.xml မွာေတာ့ sub bean ရဲ႕ id ကို main bean မွာ ref tag နဲ႔ထည့္ေပးရမယ္
+	<ref bean="dependentSubObject" />
+	
+	

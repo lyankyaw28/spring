@@ -97,13 +97,6 @@ Spring Application တစ္ခုဖန္တီးၿခင္း(simple)
 	4.Load the spring jar files
 	5.Run the test class
 	
-	(အလြယ္မွတ္ရန္) 
-	xml file ကို resource ထဲကိုထည့္
-	resource ကေန factory ထဲကိုထည့္
-	factory ကေန getBean method ထဲကို id ထည့္ေပးလိုက္ရင္
-	Entity ထြက္လာ...
-	Entity ထြက္လာရင္ သူ႕ method မ်ားကို လွမ္းေခၚလို႔ရၿပီ
-	
 	2.applicationContext.xml ထဲမွာ java class ထဲကို IOC container က data မ်ားကို property tag ကတစ္ဆင့္ထည့္ေပးလို႔ရတယ္
 		<bean id="studentbean" class="com.javatpoint.Student">  
 		<property name="name" value="Vimal Jaiswal"></property> 
