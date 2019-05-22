@@ -1,4 +1,4 @@
-package main.dependency_injection.constructor_injection;
+package main.dependency_injection.constructor.constructor_injection_primitive_and_String;
 
 public class Employee {
 	private int id;

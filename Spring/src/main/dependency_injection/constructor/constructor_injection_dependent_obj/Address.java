@@ -1,4 +1,4 @@
-package main.dependency_injection.constructor_injection_dependent_obj;
+package main.dependency_injection.constructor.constructor_injection_dependent_obj;
 
 public class Address {
 	private String city;

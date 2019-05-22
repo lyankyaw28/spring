@@ -58,7 +58,46 @@ Dependency Injection ကို spring framework မွာနည္းလမ္�
 	2.By Setter method
 *************************************************************************************************************************
 Dependency Injection by Constructor Example
-	<constructor-arg> ဆိုတဲ့ sub tag ကိုသံုးတယ္ သူက ဘယ္သူ႕ရဲ႕ sub tag လည္းဆိုေတာ့ <bean> tag ရဲ႕ subtag ၿဖစ္တယ္
-		1.primitive and String-based values (sample code --> constructor_dependency_injection package)
-		2.Dependent object (contained object) (sample code --> constructor_injection_dependent_obj package)
-		3.Collection values etc.
+	1.primitive and String-based values
+	2.Dependent object (contained object)
+	3.Collection values etc.
+	
+	ဥပမာမ်ားေရးထားေသာ package name မ်ား
+	1.Primitive and String-based values(constructor_injection_primitive_and_string)
+			
+	2.Dependent Object(constructor_injection_dependent_obj)	
+			
+	3.Collection မွာ ၃ မ်ိဳးၿဖစ္ႏိုင္တယ္
+		1.List
+		2.Set
+		3.Map
+			ေနာက္ထပ္ ၂ မ်ိဳး ထပ္ကြဲေသးတယ္
+				1.String based
+					1.1.String based List(constructor_injection_string_list)
+					1.2.String base Map(constructor_injection_string_map)
+				2.Non-string based
+					2.1.Non-String based List(constructor_injection_non_string_list)
+					2.2.String base Map(constructor_injection_non_string_map)
+********************************************************************************************************************
+Dependency Injection by setter method
+	1.primitive and String-based values
+	2.Dependent object (contained object)
+	3.Collection values etc.
+	
+	ဥပမာမ်ားေရးထားေသာ package name မ်ား
+	1.Primitive and String-based values(setter_injection_primitive_and_string)
+			
+	2.Dependent Object(setter_injection_dependent_obj)	
+			
+	3.Collection မွာ ၃ မ်ိဳးၿဖစ္ႏိုင္တယ္
+		1.List
+		2.Set
+		3.Map
+			ေနာက္ထပ္ ၂ မ်ိဳး ထပ္ကြဲေသးတယ္
+				1.String based
+					1.1.String based List(setter_injection_string_list)
+					1.2.String base Map(setter_injection_string_map)
+				2.Non-string based
+					2.1.Non-String based List(setter_injection_non_string_list)
+					2.2.String base Map(setter_injection_non_string_map)
+				

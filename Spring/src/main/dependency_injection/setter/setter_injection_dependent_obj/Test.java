@@ -1,4 +1,4 @@
-package main.dependency_injection.constructor_injection_collection;
+package main.dependency_injection.setter.setter_injection_dependent_obj;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
@@ -10,8 +10,8 @@ public class Test {
 		Resource r = new ClassPathResource("applicationContext.xml");
 		BeanFactory factory = new XmlBeanFactory(r);
 
-		Question q = (Question) factory.getBean("injectionCollection");
-		q.displayInfo();
+		Employee e = (Employee) factory.getBean("setterInjectionDependentEmployee");
+		e.displayInfo();
 
 	}
 }

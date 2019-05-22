@@ -1,4 +1,4 @@
-package main.dependency_injection.constructor_injection_dependent_obj;
+package main.dependency_injection.constructor.collection.map.constructor_injection_non_string_map;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
@@ -7,12 +7,11 @@ import org.springframework.core.io.Resource;
 
 public class Test {
 	public static void main(String[] args) {
-
 		Resource r = new ClassPathResource("applicationContext.xml");
 		BeanFactory factory = new XmlBeanFactory(r);
 
-		Employee s = (Employee) factory.getBean("dependentMainObject");
-		s.show();
+		Question q = (Question) factory.getBean("constructorInjectionNonStringMapQuestion");
+		q.displayInfo();
 
 	}
 }

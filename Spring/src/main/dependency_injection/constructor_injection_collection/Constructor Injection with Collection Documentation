@@ -1,7 +1,0 @@
-spring framework မွာ collection မ်ားကိုလည္း inject လုပ္လို႔ရတယ္
-၃ မ်ိဳးရွိတယ္
-	1.list
-	2.set
-	3.map
-	
-collection တစ္ခုခ်င္းစီတိုင္းမွာ string based value နဲ႔ non string based value ေတြဆိုၿပီး ရွိတယ္
