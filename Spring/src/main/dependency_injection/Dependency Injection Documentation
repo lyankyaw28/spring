@@ -100,4 +100,14 @@ Dependency Injection by setter method
 				2.Non-string based
 					2.1.Non-String based List(setter_injection_non_string_list)
 					2.2.String base Map(setter_injection_non_string_map)
-				
+*********************************************************************************************************
+Difference between constructor and setter injection
+	1.Partial dependency: ဆိုလိုတာက properties ေတြအမ်ားၾကီးရွိတယ္ class တစ္ခုတည္းမွာ 
+	အဲ့မွာ field တစ္ခုတည္းကိုပဲ inject လုပ္ခ်င္တယ္ဆိုရင္ constructor က သိပ္အဆင္မေၿပေတာ့ဘူး မရမကလုပ္လို႔ေတာ့ရတယ္
+	အဲ့တာဆို constructor ေတြအမ်ားၾကီးလိုက္ေရးရလိမ့္မယ္ အဲ့လိုဆိုေတာ့ setter ကပဲ အဆင္ေၿပလိမ့္မယ္
+	
+	2.Overriding: setter injection ေရာ constructor injection ေရာ ႏွစ္ခုလံုးေရးထားတယ္ဆိုရင္ IOC container ၾကီးက setter method နဲ႔ပဲ
+	injection လုပ္သြားလိမ့္မယ္
+	
+	3.Changes:value change ရတာလည္း setter injection ကပိုလြယ္တယ္ ဘာလို႔လဲဆိုေတာ့ constructor လိုမ်ိဳး new instance ေတြေဆာက္ေနစရာမလိုဘူး
+	ဒါေၾကာင့္ setter injection ကပိုၿပီးေတာ့ သံုးရတာအဆင္ေၿပေစတယ္
