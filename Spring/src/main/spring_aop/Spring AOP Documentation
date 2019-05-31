@@ -1,0 +1,65 @@
+Spring AOP
+	Aspect Oriented Programming က OOP concepts ကို ေကာင္းေကာင္းေပးလိမ့္မယ္ (Modularity is also a feature of object oriented programming.)
+	cross-cutting concerns ဆိုတာေၾကာင့္ modularity ကို ပိုတိုးလာေစႏိုင္တယ္အသံုးၿပဳႏိုင္တယ္
+	cross-cutting concern ဆိုတာက application တစ္ခုလံုးကို affect ၿဖစ္ေစတယ္ 
+	code ရဲ႕ေနရာတစ္ခုတည္းကေနထိန္းထားသင့္တယ္ ဥပမာtransaction management, authentication, logging, security etc.တို႔ၿဖစ္တယ္
+	
+AOP ကို ဘာလို႔သံုးရလဲ
+	additional concern မ်ားကို တကယ့္ logic ေတြမလုပ္ခင္ လုပ္ၿပီးခ်ိန္မွာ pluggable နည္းလမ္းနဲ႔ dynamically ေပါင္းထည့္ရန္ AOP က လုပ္ေဆာင္တယ္
+	ဆိုလိုတာက အဲ့လိုမ်ိဳး process မ်ားကို method မ်ားစြာခြဲေရးေနမယ့္အတူတူ xml file ထုတ္ၿပီး ေရးမယ္လို႔ ေၿပာခ်င္တာ
+	အဲ့တာဆိုရင္ xml file တစ္ခုတည္းကိုပဲ ၿပင္လိုက္ရံုပဲ
+	maintenance ေကာင္းတယ္
+		
+AOP ကို ဘယ္မွာသံုးလဲ
+	declarative enterprise services such as declarative transaction management မ်ားကို လုပ္ေဆာင္ရန္
+	users မ်ားကို  custom aspects မ်ား implements လုပ္ရန္ခြင့္ၿပဳေပးတယ္
+	
+AOP Concepts and Terminology
+
+	1.Join point
+	2.Advice
+	3.Pointcut
+	4.Introduction
+	5.Target Object
+	6.Aspect
+	7.Interceptor
+	8.AOP Proxy
+	9.Weaving
+	
+		AOP Implementations
+			1.AspectJ
+			2.Spring AOP
+			3.JBoss AOP
+			
+			2.Spring AOP
+				spring aop ကို နည္းလမ္း ၃ မ်ိဳးနဲ႔သံုးလို႔ရတယ္ အသံုးမ်ားတဲ့နည္းလမ္းကေတာ့ Spring AspectJ Annotation Style ၿဖစ္တယ္
+				spring aop ကို သံုးလို႔ရဖို႔ နည္းလမ္း ၃မ်ိဳးေပးထားတယ္
+				1.By Spring1.2 Old style (dtd based) (also supported in Spring3)
+				2.By AspectJ annotation-style
+				3.By Spring XML configuration-style(schema based)
+***************************************************************************************************
+Spring1.2 old style AOP
+	1.Before Advice it is executed before the actual method call.
+	2.After Advice it is executed after the actual method call. If method returns a value, it is executed after returning value.
+	3.Around Advice it is executed before and after the actual method call.
+	4.Throws Advice it is executed if actual method throws exception.
+	
+ advice interfaces ရဲ႕ တည္ေဆာက္ပံုကို ေတြ႕ခ်င္ရင္ ပံုကို ၾကည့္ပါ
+	1.MethodBeforeAdvice interface extends the BeforeAdvice interface.
+	2.AfterReturningAdvice interface extends the AfterAdvice interface.
+	3.ThrowsAdvice interface extends the AfterAdvice interface.
+	4.MethodInterceptor interface extends the Interceptor interface. It is used in around advice.
+
+ProxyFactoryBean class: အေၾကာင္း
+	spring framework က ProxyFactoryBean Class ကို ေပးပါတယ္
+	သူ႕မွာ properties ၂ ခုပါ၀င္တယ္
+		1.target
+		2.interceptorNames
+	methoad_before_advice package ထဲမွာရွိတဲ့ example မွာဆိုရင္ A Class ရဲ႕ instance ကို target object အၿဖစ္သတ္မွတ္ၿပီး advisor class ရဲ႕ instance ကို
+	interceptor အၿဖစ္သတ္မွတ္ပါတယ္ 
+	advisor object ကို interceptor အားေပးဖို႔အတြက္ list အေနနဲ႔ xml ထဲေရးေပးရမယ္
+	
+	
+	
+ 	
+		

@@ -22,5 +22,7 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="D:/TOTAL_REAL_WORKSPACE/spring/jar/applicationContext/org.springframework.context.jar"/>
+	<classpathentry kind="lib" path="D:/TOTAL_REAL_WORKSPACE/spring/jar/methoad_before_advice/org.springframework.aop-3.2.0.release.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
